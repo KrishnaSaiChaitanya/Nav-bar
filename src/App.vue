@@ -15,9 +15,8 @@
 
   <div
     class="z-20 z-50 max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:divide-gray-600 dark:bg-[#2F3349] block"
-    id="notification-dropdown"
-    style="position: fixed; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(464px, 62px, 0px);left: 38%;"
-    v-if="showDiv" data-popper-placement="bottom">
+    id="notification-dropdown" style="position: fixed; right: 3%; top: 5%;" v-if="showDiv" data-popper-placement="bottom"
+    @mouseleave="toggleDivVisibility">
     <div
       class="flex px-4 py-2 text-base font-medium justify-between text-gray-700 bg-gray-50 dark:bg-[#2F3349] dark:text-gray-400">
       Notifications <img src="/mail-2.svg" class="flex " alt="My SVG Image" />
@@ -95,7 +94,7 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
       <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
         <ul
-          class="flex flex-col font-medium p-1 md:p-0 mt-1 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-[#2F3349] md:dark:bg-[#2F3349] dark:border-gray-700">
+          class="flex flex-col font-medium p-1 md:p-0 mt-1 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-4 md:mt-0 md:border-0 md:bg-white dark:bg-[#2F3349] md:dark:bg-[#2F3349] dark:border-gray-700">
 
           <li id="dropdown1"
             class="flex items-center px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 ">
@@ -108,7 +107,7 @@
             <a href="#" id="text" class="block py-2 pl-3 pr-4 group">Layout</a>
           </li>
           <li id="dropdown1">
-            <button @click="toggleDropdown('dropdownNavbar')"
+            <button @mouseover="toggleDropdown('dropdownNavbar')"
               class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               id="text" :aria-expanded="isDropdownOpen('dropdownNavbar')">
               <img src="/table.svg" class="mr-1" alt="My SVG Image" />
@@ -137,7 +136,7 @@
                   </a>
                 </li>
                 <li id="dropdown-element">
-                  <button @click="toggleDropdown('doubleDropdown')" @keydown.stop
+                  <button @mouseover="toggleDropdown('doubleDropdown')" @keydown.stop
                     class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#F0676752] dark:hover:bg-[#F0676752] rounded-lg dark:hover:text-white mr-1"
                     :aria-expanded="isDropdownOpen('doubleDropdown')">
                     Users
@@ -150,7 +149,7 @@
                   <div
                     :class="{ 'hidden': !isDropdownOpen('doubleDropdown'), 'md:block': isDropdownOpen('doubleDropdown') }"
                     class="z-10 absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#2F3349]"
-                    style="left: 100%;" id="subdropdown-right">
+                    style="left: 100%;top: 50%;" id="subdropdown-right">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
                       <li>
                         <a href="#"
@@ -159,7 +158,7 @@
                         </a>
                       </li>
                       <li id="dropdown-element">
-                        <button @click="toggleSubDropdown('subdoubleDropdown')" @keydown.stop
+                        <button @mouseover="toggleSubDropdown('subdoubleDropdown')" @keydown.stop
                           class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#F0676752] dark:hover:bg-[#F0676752] rounded-lg dark:hover:text-white mr-1"
                           :aria-expanded="isSubDropdownOpen('subdoubleDropdown')">
                           View
@@ -172,7 +171,7 @@
                         <div
                           :class="{ 'hidden': !isSubDropdownOpen('subdoubleDropdown'), 'md:block': isSubDropdownOpen('subdoubleDropdown') }"
                           class="z-10 absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#2F3349]"
-                          style="left: 100%;" id="subdropdown-right">
+                          style="left: 100%;top: 50%;" id="subdropdown-right">
                           <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                             aria-labelledby="doubleDropdownButton">
                             <li>
@@ -405,7 +404,7 @@
 
     </div>
   </div>
-  <div class="bg-[#F8F7FA] dark:bg-[#25293C]" style="height: 100vh;"></div>
+  <div class="bg-[#F8F7FA] dark:bg-[#25293C]" @click="closeDropdown" style="height: 100vh;"></div>
   <!-- <Popover/> -->
 </template>
 
@@ -450,6 +449,10 @@ export default {
       } else {
         this.openSubDropdown.push(id);
       }
+    },
+    closeDropdown() {
+      this.openDropdowns = [];
+      this.openSubDropdown = [];
     },
     isDropdownOpen(id) {
       return this.openDropdowns.includes(id);
@@ -508,6 +511,10 @@ onBeforeUnmount(() => {
 #dropdown1:focus-within {
   background: linear-gradient(72.47deg, #F06767 22.16%, rgba(240, 103, 103, 0.7) 76.47%);
   border-radius: 10px;
+}
+
+#dropdown1 {
+  margin-left: 10px;
 }
 
 #dropdown-element:focus-within {
