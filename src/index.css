@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Public+Sans:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.dropdown-menu:focus-within {
+    background: linear-gradient(72.47deg, #F06767 22.16%, rgba(240, 103, 103, 0.7) 76.47%);
+}
+body{
+/* font-family: 'Public Sans', sans-serif; */
+}
