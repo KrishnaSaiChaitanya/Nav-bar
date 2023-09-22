@@ -475,38 +475,27 @@ import DarkLightModeToggle from './views/DarkLightModeToggle.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const scrollPosition = ref(0);
-const showNav = ref(true); // Initially, set to true if you want the div to be visible
-
+const showNav = ref(true);
 const handleScroll = () => {
-  // Get the current scroll position
   scrollPosition.value = window.scrollY;
-
-  // Check if the scroll position is greater than or equal to 30px
   if (scrollPosition.value <= 50) {
-    showNav.value = false; // Hide the div
+    showNav.value = false;
   } else {
-    showNav.value = true; // Show the div
+    showNav.value = true;
   }
 };
-
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   showNav.value = false;
 });
-
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll);
   showNav.value = false;
 });
-
-
-
-
 </script>
 
 
 <style scoped>
-/* Add this CSS rule within the scoped style section */
 #dropdown1:focus-within {
   background: linear-gradient(72.47deg, #F06767 22.16%, rgba(240, 103, 103, 0.7) 76.47%);
   border-radius: 10px;
@@ -528,6 +517,4 @@ onBeforeUnmount(() => {
 
 #span_count {
   background: #F06767;
-
-}
-</style>
+}</style>
