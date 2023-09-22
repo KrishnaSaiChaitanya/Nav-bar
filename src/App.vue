@@ -1,4 +1,5 @@
 <template>
+  <!-- Top Nav Bar -->
   <div :class="{ 'fixed top-0 transition-opacity': showNav }" class="card bg-white dark:bg-[#2F3349] "
     style="height: 62px; padding: 12px 26px 12px 26px;width: 100%;">
     <div class="card bg-white dark:bg-[#2F3349]"
@@ -12,7 +13,7 @@
       <img src="/avatar.svg" style="height: 38px;width: 38px;margin-right: 10px;" @click="toggleDrawer" />
     </div>
   </div>
-
+  <!-- Notification Model -->
   <div
     class="z-20 z-50 max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:divide-gray-600 dark:bg-[#2F3349] block"
     id="notification-dropdown" style="position: fixed; right: 3%; top: 5%;" v-if="showDiv" data-popper-placement="bottom"
@@ -87,8 +88,9 @@
       </div>
     </div>
   </div>
-
+  <!-- Separator -->
   <hr class="h-px bg-gray-200 border-0 dark:bg-gray-600">
+  <!--Bottom Nav Bar -->
   <nav class="bg-white border-gray-200 dark:bg-[#2F3349] dark:border-gray-700" style="box-shadow:  0px 2px 4px 0px #A5A3AE4D;
 ;">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
@@ -257,11 +259,10 @@
       </div>
     </div>
   </nav>
-
+  <!-- Side Bar -->
   <div>
-    <!-- Drawer -->
-    <div :id="drawerId" class="fixed top-0 left-0 z-40  h-screen p-4 overflow-y-auto transition-transform"
-      style="width: 260px;" :class="{ '-translate-x-full': !isDrawerOpen, 'bg-white dark:bg-[#2F3349]': true }"
+    <div :id="drawerId" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform"
+      style="width: 260px;" :class="{ 'translate-x-full': !isDrawerOpen, 'bg-white dark:bg-[#2F3349]': true }"
       :tabindex="isDrawerOpen ? '0' : '-1'" :aria-labelledby="drawerLabelId">
       <div style="display: flex; flex-direction: row; padding: 35px, 14px, 35px, 24px;" class="p-3">
         <img src="/vuexy-logo.svg" style="height: 24px;width: 34px;margin-right: 10px;" />
@@ -404,8 +405,8 @@
 
     </div>
   </div>
+  <!-- Main Div -->
   <div class="bg-[#F8F7FA] dark:bg-[#25293C]" @click="closeDropdown" style="height: 100vh;"></div>
-  <!-- <Popover/> -->
 </template>
 
 
@@ -470,8 +471,6 @@ export default {
 </script>
 <script setup>
 import Dropdown from './views/Dropdown.vue';
-import Popover from './views/Popover.vue'
-import Overlay from './views/Overlay.vue'
 import DarkLightModeToggle from './views/DarkLightModeToggle.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
@@ -531,8 +530,4 @@ onBeforeUnmount(() => {
   background: #F06767;
 
 }
-
-/* #dropdown-element :hover{
-  background-color: #F0676752;
-} */
 </style>
