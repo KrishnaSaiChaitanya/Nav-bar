@@ -381,7 +381,7 @@
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/page-1.svg" alt="My SVG Image" />
+              <img src="/Page-1.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Pages</span>
             </a>
           </li>
