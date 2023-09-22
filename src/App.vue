@@ -111,7 +111,7 @@
             <button @click="toggleDropdown('dropdownNavbar')"
               class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               id="text" :aria-expanded="isDropdownOpen('dropdownNavbar')">
-              <img src="/table.svg" class="mr-1" alt="My SVG Image" />
+              <img src="table.svg" class="mr-1" alt="My SVG Image" />
               Apps
               <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 10 6">
@@ -286,14 +286,14 @@
           <li id="dropdown-element">
             <a href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/home.svg" alt="My SVG Image" />
+              <img src="home.svg" alt="My SVG Image" />
               <span id="text" class="ml-3">Dashboard</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/layout.svg" alt="My SVG Image" />
+              <img src="layout.svg" alt="My SVG Image" />
               <span id="text" class="ml-3">Layout</span>
             </a>
           </li>
@@ -306,7 +306,7 @@
             <button type="button"
               class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example-ecommerce" data-collapse-toggle="dropdown-example-ecommerce">
-              <img src="/users.svg" alt="My SVG Image" />
+              <img src="users.svg" alt="My SVG Image" />
               <span id="text" class="flex-1 ml-3 text-left whitespace-nowrap">Users</span>
               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -331,7 +331,7 @@
           <li>
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/book.svg" alt="My SVG Image" />
+              <img src="book.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Academy</span>
               <span
                 class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-[#2F3349] dark:text-gray-300">Pro</span>
@@ -340,21 +340,21 @@
           <li id="dropdown-element">
             <a href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/truck.svg" alt="My SVG Image" />
+              <img src="truck.svg" alt="My SVG Image" />
               <span id="text" class="ml-3">Logistics</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/cart.svg" alt="My SVG Image" />
+              <img src="cart.svg" alt="My SVG Image" />
               <span id="text" class="ml-3">eCommerce</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/mail-1.svg" alt="My SVG Image" />
+              <img src="mail-1.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
               <span id="span_count"
                 class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-white-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
@@ -363,14 +363,14 @@
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/chat.svg" alt="My SVG Image" />
+              <img src="chat.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Chat</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/calendar.svg" alt="My SVG Image" />
+              <img src="calendar.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Calender</span>
             </a>
           </li>
@@ -381,21 +381,21 @@
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/page-1.svg" alt="My SVG Image" />
+              <img src="page-1.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Pages</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/lock.svg" alt="My SVG Image" />
+              <img src="lock.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Authentications</span>
             </a>
           </li>
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/wizard.svg" alt="My SVG Image" />
+              <img src="wizard.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Wizard Examples</span>
             </a>
           </li>
