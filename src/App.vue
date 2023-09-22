@@ -88,7 +88,7 @@
       </div>
     </div>
   </div>
-  
+
   <hr class="h-px bg-gray-200 border-0 dark:bg-gray-600">
   <nav class="bg-white border-gray-200 dark:bg-[#2F3349] dark:border-gray-700" style="box-shadow:  0px 2px 4px 0px #A5A3AE4D;
 ;">
@@ -354,7 +354,7 @@
           <li id="dropdown-element">
             <a href="#" id="text"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <img src="/mail -1.svg" alt="My SVG Image" />
+              <img src="/mail-1.svg" alt="My SVG Image" />
               <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
               <span id="span_count"
                 class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-white-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
